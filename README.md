@@ -8,11 +8,15 @@ Web UI to monitor palworld server made in nodejs express
     2. Run ``` nvm install node and then again restart session ```
     
   __pm2__ - running server monitor in background
+      
        Run Command 
+       
        ``` npm install pm2@latest -g ```
        
   **git** 
+    
     Run Command 
+    
         ``` sudo apt install git ```
     
 ### Steps to Use (Run following commands):
