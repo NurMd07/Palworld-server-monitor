@@ -3,6 +3,7 @@ Web UI to monitor palworld server made in nodejs express
 
 ### Requirements  :
   **Nodejs** -Important for running web ui  
+  
     1. Install nodejs from : ```https://github.com/nvm-sh``` (run curl ... command from description install section)  and then restart shell/session by logout login or other way  
     2. Run `nvm install node and then again restart session`
     
