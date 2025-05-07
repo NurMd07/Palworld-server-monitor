@@ -2,15 +2,15 @@
 Web UI to monitor palworld server made in nodejs express
 
 ### Requirements :
-  *** Nodejs *** -Important for running web ui
+  **Nodejs** -Important for running web ui
     1. Install nodejs from : https://github.com/nvm-sh (run curl ... command from description install section)  and then restart shell/session by logout login or other way
     2. Run ``` nvm install node and then again restart session ```
     
-  __ pm2 __ - running server monitor in background
+  __pm2__ - running server monitor in background
    Run Command 
        ``` npm install pm2@latest -g ```
        
-  ** git **
+  **git**
     Run Command 
         ``` sudo apt install git ```
     
@@ -18,7 +18,7 @@ Web UI to monitor palworld server made in nodejs express
 1. ``` git clone https://github.com/NurMd07/Palworld-server-monitor.git ```
 2. ``` cd Palworld-server-monitor ```
 3. run ``` npm i ```
-4. Edit ** PalWorldSettings.ini ** by using nano file location ( /home/steam/palworld/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini) adjust according to your path adn then
+4. Edit **PalWorldSettings.ini** by using nano file location ( /home/steam/palworld/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini) adjust accordingly to your path and then
     1.Change RESTAPIEnabled=True (from false to True)
     2.Change AdminPassword="changepassword"  , Save.
 6. edit .env by running
@@ -30,6 +30,6 @@ Web UI to monitor palworld server made in nodejs express
        ADMIN_PASSWORD = 'changewhatsinconfig'
            (admin password is from  PalWorldSettings.ini AdminPassword="password") , Save.
 7. ``` pm2 start app.js ```
-8. At last visit on ** http://localhost:8000 ** and login using console username/password
-9. **Done! ** Enjoy.
+8. At last visit on **http://localhost:8000** and login using console username/password
+9. **Done!** Enjoy.
      
