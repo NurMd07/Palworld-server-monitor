@@ -9,11 +9,11 @@ Web UI to monitor palworld server made in nodejs express
     
  **pm2** - running server monitor in background   
  
-   Run Command  `npm install pm2@latest -g`
+   >  Run Command  `npm install pm2@latest -g`
        
   **git**  - cloning this repo
   
-   Run Command `sudo apt install git`
+   >  Run Command `sudo apt install git`
     
 ### Steps to Use (Run following commands):
 1. ``` git clone https://github.com/NurMd07/Palworld-server-monitor.git ```
