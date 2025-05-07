@@ -1,5 +1,5 @@
 # Palworld-server-monitor
-Web UI to monitor palworld server made in nodejs express
+Web UI to monitor palworld server , made in nodejs/express
 
 ### Requirements  :
   **Nodejs** -Important for running web ui  
