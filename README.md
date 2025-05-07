@@ -2,22 +2,21 @@
 Web UI to monitor palworld server made in nodejs express
 
 ### Requirements :
-  **Nodejs** -Important for running web ui
-    
+  **Nodejs** -Important for running web ui  
     1. Install nodejs from : https://github.com/nvm-sh (run curl ... command from description install section)  and then restart shell/session by logout login or other way
-    2. Run ``` nvm install node and then again restart session ```
+    2. Run `nvm install node and then again restart session`
     
   __pm2__ - running server monitor in background
       
        Run Command 
        
-       ``` npm install pm2@latest -g ```
+        npm install pm2@latest -g
        
   **git** 
+       Run Command 
+
     
-    Run Command 
-    
-        ``` sudo apt install git ```
+         sudo apt install git 
     
 ### Steps to Use (Run following commands):
 1. ``` git clone https://github.com/NurMd07/Palworld-server-monitor.git ```
