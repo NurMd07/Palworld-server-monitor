@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palworld admin panel</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="bg-[url('/assets/background.jpg')] bg-[url('/assets/background_large.jpg')] bg-no-repeat bg-center bg-cover 
+h-screen w-full p-0 m-0 box-border overflow-hidden">
+<div class="menu-options invisible  pointer-events-none opacity-0 transition-opacity duration-300
+ w-full h-screen flex justify-center items-center absolute top-0 left-0 z-10">
+  <div class="options flex gap-5 rounded-lg px-6 py-4 w-[60%] lg:w-[20%] bg-gray-800 shadow-lg text-white">
+    <button class="bg-gray-700 flex-4 text-white p-1 text-sm  w-full flex justify-center items-center gap-3 logout hover:bg-gray-600 active:bg-gray-900 ">Logout 
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+      <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+    </svg></button>
+    <button class="menu-close bg-green-700 flex-1  text-white p-2  w-full flex justify-center items-center gap-3 rounded-2xl hover:bg-green-600 active:bg-green-900">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<div class="logo">
+  <img src="assets/logo.jpg" alt="logo" class=" absolute rounded-xl w-9 h-9
+   left-3 top-4 lg:left-5 lg:top-5 active:scale-80 transition duration-300 hover:scale-110">
+</div>
+<div class="menu">
+  <img src="assets/pal.png" alt="logo" class="absolute rounded-2xl w-8 h-10 lg:w-10 lg:h-12
+  right-3 top-3 lg:right-5 lg:top-4 shadow-md active:scale-80 hover:scale-110 transition duration-300">
+</div>
+  <div class="server-name rounded-lg font-bold tracking-wide bg-purple-600 hover:bg-purple-700 active:bg-purple-700 
+   m-auto w-max px-4  py-1 lg:px-5  lg:py-1 lg:text-lg mt-5 lg:mt-7 text-white text-center shadow-md">
+    <h1 class="flex max-w-60 lg:max-w-80 items-center justify-center"><span>IcyPlay - Palworld Server</span><img src="assets/server.png" alt="logo"
+       class="ms-3 w-5 h-5"></h1>
+  </div>
+
+<div class="main w-full max-h-[100%] overflow-hidden lg:w-4/5 lg:h-4/5 p-5 pb-8 lg:pb-5  mt-5 lg:mt-7  lg:pt-4 flex
+  lg:flex-col flex-wrap items-start justify-start gap-4 lg:gap-8 lg:mt-10 m-auto">
+ 
+  <div class="col-1 w-full lg:h-[100%] flex flex-col items-start  gap-4 lg:gap-8  lg:w-1/2 ">
+  <div class="last-online w-full relative ">
+    <div class="active-players  bg-green-600 text-white text-center shadow-md ">
+      <h1 class="font-semibold">Last Seen Player</h1>
+    </div>
+    <div class="last-online-player flex justify-center ">
+    <li class="m-2 w-2/5 last-online-player-name list-none text-white text-center"></li>
+    <li class="m-2 w-1/5  list-none text-white text-center font-semibold">-</li>
+    <li class="m-2 w-2/5 last-online-player-time  list-none text-white text-center "></li>
+  </div>
+   
+    </div>
+<div class="player-list w-full relative pb-1 lg:max-h-6/7 ">
+<h1 class="text-center bg-yellow-500  text-white font-bold text-md">Online Players</h1>
+<div class="player-table-heading mb-3 bg-gray-900 text-center list-none flex justify-center text-white lg:mb-3">
+
+  <li class="w-full p-1 border-1 font-semibold border-gray-700">Name</li>
+  <li class="w-1/3 p-1  px-6 border-1 font-semibold border-gray-700">Level</li>
+  <li class="w-2/3 p-1 px-6 border-1 font-semibold border-gray-700">Steam Id</li>
+  
+  </div>
+<div class="online-players px-4 pt-3 lg:pt-2  max-h-[16vh] lg:max-h-6/7 overflow-x-hidden custom-scrollbar mb-8 ">
+
+  <div class="loader-bar-container flex justify-center items-center">
+    <div class="lds-facebook">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+ 
+</div>
+
+<div class="active-players absolute bottom-0 w-full bg-gray-700 text-white text-center shadow-md ">
+  <h1>Currently Playing : <span class="online-players-count"></span></h1>
+</div>
+</div>
+
+</div>
+<div class="col-2  lg:h-[100%] flex flex-col  gap-4 lg:gap-8  w-full lg:w-1/2 gap-4 lg:gap-8">
+<div class="metrics lg:h-1/2  ">
+<h1 class="text-center bg-cyan-600 text-white font-semibold">Server Info</h1>
+<div class="loader-bar-container loader2 flex justify-center items-center px-3 py-5 lg:py-5 lg:px-5 ">
+  <div class="lds-facebook">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<div class="px-3 py-5 lg:py-5 lg:px-5 server-info  hidden ">
+
+<div class=" max-w-45 text-white m-auto flex p-1 px-0 justify-center mb-3 bg-gray-800 hover:bg-gray-900 active:bg-gray-900 rounded-full shadow-md">
+  Server <h1 class="text-center font-semibold mx-2 "> FPS &nbsp;&nbsp; : &nbsp;</h1>
+  <div class="server-fps text-center font-semibold text-green-400">
+      59
+  </div>
+</div>
+
+<div class="ram-info text-white p-1  lg:pt-5">
+  <h1 class="w-full">
+  RAM  <span class="text-white font-semibold ms-1"> [ <span class="ram-usage">0 GB</span> / <span class="ram-total">0 GB</span> ]</span>
+  </h1>
+  
+
+<div class="w-full bg-gray-200 relative text-black mt-3 mb-1 font-semibold rounded-full h-5">
+  <div class="ram-usage-bar bg-green-600 h-5 rounded-full " ><span class="ram-usage-percentage absolute font-semibold w-full flex justify-center text-sm"></span></div>
+</div>
+
+</div>
+
+<div class="cpu-info text-white p-1">
+  <h1 class="w-full">
+  CPU <span class="text-white font-semibold ms-1"> [ <span class="cpu-total-cores">0</span> Cores ]</span>
+  </h1>
+  <div class="w-full  bg-gray-200 text-black relative font-semibold  mt-3  rounded-full h-5">
+    <div class="cpu-usage-bar bg-green-600 h-5 rounded-full " ><span class="cpu-usage-percentage absolute  w-full flex justify-center text-sm"></span></div>
+    
+  </div>
+</div>
+</div>
+</div>
+
+<div class="brodcast max-h-[21vh] lg:max-h-1/2 flex flex-col br-orange ">
+  <div class="bg-gray-700 text-white text-center shadow-md ">
+    <h1>Broadcast Message</h1>
+  </div>
+ 
+      <h1 class="messages min-h-[8vh]  lg:min-h-[14vh] brodcast-message-history text-gray-300 overflow-scroll overflow-x-hidden custom-scrollbar 
+     px-5 py-5 font-semibold flex justify-center items-center"> 
+     <div class="loader-bar-container flex justify-center items-center">
+      <div class="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+      </h1>
+     
+  <div class="brodcast w-full flex items-center justify-center">
+<input type="text" class="brodcast-input w-90 flex-1 h-10 bg-gray-100 text-center shadow-md border border-gray-300 
+rounded-bl-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter Message">
+<button class="w-20 h-10  bg-gray-700 text-white text-center shadow-md  rounded-br-md brodcast-send-btn">Send</button>
+</div>
+
+</div>
+</div>  
+
+</div>
+
+
+<div class="footer w-full fixed bottom-0  text-center font-semibold shadow-md ">
+
+  <h1 class="bg-blue-500 text-white ">Palworld Server Monitor</h1>
+
+</div>  
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palworld admin panel</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body class="bg-[url('/assets/background.jpg')] bg-[url('/assets/background_large.jpg')] bg-no-repeat bg-center bg-cover 
+h-screen w-full p-0 m-0 box-border overflow-hidden">
+
+<div class="headers" >
+<div class="logo">
+  <img src="assets/logo.jpg" alt="logo" class=" absolute rounded-xl w-9 h-9
+   left-3 top-4 lg:left-5 lg:top-5 active:scale-80 transition duration-300 hover:scale-110">
+</div>
+
+  <div class="server-name rounded-lg font-bold tracking-wide bg-purple-600 hover:bg-purple-700 active:bg-purple-700 
+   m-auto w-max px-4  py-1 lg:px-5  lg:py-1 lg:text-lg mt-5 lg:mt-7 text-white text-center shadow-md">
+    <h1 class="flex max-w-60 lg:max-w-80 items-center justify-center"><span>IcyPlay - Palworld Server</span><img src="assets/server.png" alt="logo"
+       class="ms-3 w-5 h-5"></h1>
+  </div>
+</div>
+
+<div class="main w-[90%] lg:w-[35%] rounded-lg">
+    <div class="login-title text-center  font-bold text-white bg-gray-800 py-2  ">
+       <h1 class="title text-xl tracking-widest">Login</h1>
+        </div>
+<div class="login  p-5 mt-2">
+    <form id="login-form" action="/login" method="POST"  class="flex flex-col justify-center">
+      <div class="login-error text-center text-white bg-rose-600 p-2 mb-4 px-0  text-sm hidden"></div>
+   
+    <label for="username" class="text-white font-semibold">Username</label>
+    <input type="text" name="username" id="username" class="w-full h-10  p-3 px-1 mt-2 text-black border-b text-white text-center border-b-blue-400 focus:outline-none focus:border-b-green-400" required>
+    <label for="password" class="text-white font-semibold mt-2">Password</label>
+    <input type="password" name="password" id="password" class="w-full  border-b text-white text-center border-b-blue-400 focus:outline-none focus:border-b-green-400 text-white text-center h-10 p-3 px-1 mt-2 text-black mb-[2em]" required>
+   <button id="login" class="bg-blue-500 hover:bg-blue-600 active:bg-blue-400 text-white rounded-lg p-2  w-2/4 lg:w-2/6 mx-auto mb-3  transition duration-200">Submit</button>
+    
+</form>
+</div>
+
+</div>
+
+<div class="footer w-full fixed bottom-0  text-center font-semibold shadow-md ">
+
+  <h1 class="bg-blue-500 text-white ">Palworld Server Monitor</h1>
+
+</div>  
+
+<script src="login.js"></script>
+</body>
+</html>
