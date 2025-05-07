@@ -191,6 +191,9 @@ async function getSystemStats() {
         totalMemory: Number(Math.ceil((mem.total / (1024 ** 3)).toFixed(2))),
         usedMemory: Number((mem.used / (1024 ** 3)).toFixed(2)),
         totalCores : cpuInfo.cores,
+        totalVirtualMemory: Number(Math.ceil((mem.swaptotal / (1024 ** 3)).toFixed(2))), // Total Swap (Virtual Memory) in GB
+        usedVirtualMemory: Number((mem.swapused / (1024 ** 3)).toFixed(2)), // Used Swap (Virtual Memory) in GB
+        virtualMemoryUsage: mem.swaptotal > 0 ? Number((mem.swapused / mem.swaptotal * 100).toFixed(2)) : 0 // Handle case when no swap
     };
     return systemStats;
 }

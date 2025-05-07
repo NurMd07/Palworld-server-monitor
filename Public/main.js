@@ -13,9 +13,14 @@ const onlinePlayersPlaceholder = document.querySelector('.online-players-placeho
 const serverFps = document.querySelector('.server-fps');
 const ramUsage = document.querySelector('.ram-usage');
 const ramTotal = document.querySelector('.ram-total');
+const ramUsage1 = document.querySelector('.ram-usage1');
+const ramTotal1 = document.querySelector('.ram-total1');
 const ramUsageBar = document.querySelector('.ram-usage-bar');
 const ramUsagePercentage = document.querySelector('.ram-usage-percentage');
+const ramUsageBar1 = document.querySelector('.ram-usage-bar1');
+const ramUsagePercentage1 = document.querySelector('.ram-usage-percentage1');
 const cpuUsageBar = document.querySelector('.cpu-usage-bar');
+
 const cpuTotalCores = document.querySelector('.cpu-total-cores');
 const cpuUsagePercentage = document.querySelector('.cpu-usage-percentage');
 const brodcastMessageHistory = document.querySelector('.brodcast-message-history');
@@ -175,6 +180,7 @@ async function getAndUpdateSystemStats() {
             throw new Error(`HTTP error! Status: ${response.status}`);
           }
         const data = await response.json();
+        console.log(data);
         ramUsagePercentage.textContent = `${data.ramUsage}%`;
         ramTotal.textContent = `${data.totalMemory} GB`;
         ramUsage.textContent = `${data.usedMemory} GB`;
@@ -182,6 +188,10 @@ async function getAndUpdateSystemStats() {
         cpuUsagePercentage.textContent = `${data.cpuUsage}%`;
         cpuTotalCores.textContent = `${data.totalCores} Cores`;
         cpuUsageBar.style.width = `${data.cpuUsage}%`;
+        ramTotal1.textContent = `${data.totalVirtualMemory} GB`;
+        ramUsage1.textContent = `${data.usedVirtualMemory} GB`;
+        ramUsageBar1.style.width = `${data.virtualMemoryUsage}%`;
+        ramUsagePercentage1.textContent = `${data.virtualMemoryUsage}%`;
     }catch(error){
         console.error('Error fetching system info:', error);
     }finally {
