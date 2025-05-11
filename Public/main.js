@@ -191,6 +191,7 @@ async function getAndUpdateSystemStats() {
         ramTotal1.textContent = `${data.totalVirtualMemory} GB`;
         ramUsage1.textContent = `${data.usedVirtualMemory} GB`;
         ramUsageBar1.style.width = `${data.virtualMemoryUsage}%`;
+  
         ramUsagePercentage1.textContent = `${data.virtualMemoryUsage}%`;
     }catch(error){
         console.error('Error fetching system info:', error);
