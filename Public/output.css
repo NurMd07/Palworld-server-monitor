@@ -6,7 +6,9 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-300: oklch(0.808 0.114 19.571);
     --color-red-400: oklch(0.704 0.191 22.216);
+    --color-yellow-400: oklch(0.852 0.199 91.936);
     --color-yellow-500: oklch(0.795 0.184 86.047);
     --color-green-400: oklch(0.792 0.209 151.711);
     --color-green-600: oklch(0.627 0.194 149.214);
@@ -17,17 +19,26 @@
     --color-blue-500: oklch(0.623 0.214 259.815);
     --color-blue-600: oklch(0.546 0.245 262.881);
     --color-indigo-600: oklch(0.511 0.262 276.966);
+    --color-purple-400: oklch(0.714 0.203 305.504);
     --color-purple-600: oklch(0.558 0.288 302.321);
     --color-purple-700: oklch(0.496 0.265 301.924);
+    --color-purple-800: oklch(0.438 0.218 303.724);
+    --color-purple-900: oklch(0.381 0.176 304.987);
     --color-rose-600: oklch(0.586 0.253 17.585);
     --color-gray-100: oklch(0.967 0.003 264.542);
     --color-gray-200: oklch(0.928 0.006 264.531);
     --color-gray-300: oklch(0.872 0.01 258.338);
+    --color-gray-400: oklch(0.707 0.022 261.325);
+    --color-gray-500: oklch(0.551 0.027 264.364);
     --color-gray-600: oklch(0.446 0.03 256.802);
     --color-gray-700: oklch(0.373 0.034 259.733);
     --color-gray-800: oklch(0.278 0.033 256.848);
     --color-gray-900: oklch(0.21 0.034 264.665);
+    --color-zinc-700: oklch(0.37 0.013 285.805);
+    --color-zinc-900: oklch(0.21 0.006 285.885);
+    --color-neutral-900: oklch(0.205 0 0);
     --color-stone-200: oklch(0.923 0.003 48.717);
+    --color-stone-700: oklch(0.374 0.01 67.558);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -546,6 +557,12 @@
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
+  .bg-gray-400 {
+    background-color: var(--color-gray-400);
+  }
+  .bg-gray-500 {
+    background-color: var(--color-gray-500);
+  }
   .bg-gray-700 {
     background-color: var(--color-gray-700);
   }
@@ -561,14 +578,47 @@
   .bg-green-700 {
     background-color: var(--color-green-700);
   }
+  .bg-neutral-900 {
+    background-color: var(--color-neutral-900);
+  }
+  .bg-purple-400 {
+    background-color: var(--color-purple-400);
+  }
   .bg-purple-600 {
     background-color: var(--color-purple-600);
+  }
+  .bg-purple-700 {
+    background-color: var(--color-purple-700);
+  }
+  .bg-purple-800 {
+    background-color: var(--color-purple-800);
+  }
+  .bg-purple-900 {
+    background-color: var(--color-purple-900);
+  }
+  .bg-red-300 {
+    background-color: var(--color-red-300);
+  }
+  .bg-red-400 {
+    background-color: var(--color-red-400);
   }
   .bg-rose-600 {
     background-color: var(--color-rose-600);
   }
+  .bg-stone-700 {
+    background-color: var(--color-stone-700);
+  }
+  .bg-yellow-400 {
+    background-color: var(--color-yellow-400);
+  }
   .bg-yellow-500 {
     background-color: var(--color-yellow-500);
+  }
+  .bg-zinc-700 {
+    background-color: var(--color-zinc-700);
+  }
+  .bg-zinc-900 {
+    background-color: var(--color-zinc-900);
   }
   .bg-\[url\(\'\/assets\/background\.jpg\'\)\] {
     background-image: url('/assets/background.jpg');
@@ -986,6 +1036,11 @@
     @media (width >= 64rem) {
       font-size: var(--text-lg);
       line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+  }
+  .lg\:text-\[1\.1rem\] {
+    @media (width >= 64rem) {
+      font-size: 1.1rem;
     }
   }
   .lg\:text-\[1rem\] {

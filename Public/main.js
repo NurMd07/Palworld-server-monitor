@@ -180,7 +180,7 @@ async function getAndUpdateSystemStats() {
             throw new Error(`HTTP error! Status: ${response.status}`);
           }
         const data = await response.json();
-        console.log(data);
+        
         ramUsagePercentage.textContent = `${data.ramUsage}%`;
         ramTotal.textContent = `${data.totalMemory} GB`;
         ramUsage.textContent = `${data.usedMemory} GB`;
