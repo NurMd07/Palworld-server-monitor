@@ -59,7 +59,12 @@ app.post('/login',async(req,res)=>{
 });
 
 async function authenticate(req,res,next){
- 
+   const clientIp = req.ip || req.connection.remoteAddress;
+
+  // Allow localhost requests to skip authentication
+  if (clientIp === '::1' || clientIp === '127.0.0.1' || clientIp === '::ffff:127.0.0.1') {
+    return next();
+  }
     if(req.cookies.username && req.cookies.password){
         const isUsernameValid = await bcrypt.compare(process.env.CONSOLE_USERNAME,req.cookies.username)
         const isPasswordValid = await bcrypt.compare(process.env.CONSOLE_PASSWORD,req.cookies.password);
